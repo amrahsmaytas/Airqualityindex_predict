@@ -19,9 +19,20 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
     print(prediction[0])
-
     output = round(prediction[0], 2) #gives output
-    return render_template('home.html', prediction_text="Air Quality Index is: {}".format(output), aqivalue = output) #give whole output+text
+    if (output in range(0,51):
+        return render_template('home.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
+    else if (output in range(51,100):
+        return render_template('home.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
+    else if (output in range(101,150):
+        return render_template('home.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
+    else if (output in range(151,200):
+        return render_template('home.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
+    else:
+        return render_template('home.html', prediction_text="Air Quality Index is: {}".format(output)#give whole output+text
+
+
+
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
