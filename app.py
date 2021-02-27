@@ -20,13 +20,13 @@ def predict():
     prediction = model.predict(final_features)
     print(prediction[0])
     output = round(prediction[0], 2) #gives output
-    if (output in range(0,51)):
+    if output in range(0,51)):
         return render_template('good_home.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
-    else if(output in range(51,100)):
+    elif output in range(51,100):
         return render_template('moderate_home.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
-    else if(output in range(101,150)):
+    elif output in range(101,150):
         return render_template('Unhealthy_for_Sensitive_Groups.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
-    else if(output in range(151,200)):
+    elif output in range(151,200):
         return render_template('Unhealthy_result.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
     else:
         return render_template('Very_Unhealthy.html', prediction_text="Air Quality Index is: {}".format(output)#give whole output+text
