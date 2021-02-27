@@ -14,27 +14,27 @@
 
 <body>
  <div class="login">
-	<p> About App: This App powered By A.i helps predict Air Quality Index by taking the parameters like Wind Speed(MAX,AVG) and Temperature (MIN,MAX,AVG) </p>
-	<h1>Let's Predict Air Quality Index</h1>
+	<div class="login">
+ 	<p> About App: This App powered By A.i helps predict Air Quality Index by taking the parameters like Wind Speed(MAX,AVG) and Temperature (MIN,MAX,AVG) </p>
+	<h3>Let's Predict Air Quality Index </h3>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="interview_score3" placeholder="Maximum Wind Speed" required="required" /><br>
-    	<input type="text" name="experience" placeholder="Maximum Temperature" required="required" /><br>
-        <input type="text" name="test_score" placeholder="Minimum Temperature" required="required" /><br>
-        <input type="text" name="interview_score5" placeholder="Average Temperature" required="required" /><br>
-        <input type="text" name="interview_score6" placeholder="Average Wind Speed" required="required" /><br>
+      <input type="text" name="interview_score3" placeholder="Maximum Wind Speed In (M/S)" required="required" /><br>
+    	<input type="text" name="interview_score6" placeholder="Average Wind Speed In (M/S)" required="required" /><br>
 
+      <input type="text" name="experience" placeholder="Maximum Temperature In (°C)" required="required" /><br>
+        <input type="text" name="test_score" placeholder="Minimum Temperature In (°C)" required="required" /><br>
+        <input type="text" name="interview_score5" placeholder="Average Temperature In (°C)" required="required" /><br>
+        
        
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
-   <br>
-   <br>
   
-   
- </div>
+   </div>
+
  {{prediction_text}}
 
 </body>
