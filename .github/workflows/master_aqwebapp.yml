@@ -32,4 +32,4 @@ jobs:
       with:
         app-name: 'aqwebapp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_06b546648dfc499db8ad16506fa20456 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_12aba71a407d440e8b06002e717941dc }}
