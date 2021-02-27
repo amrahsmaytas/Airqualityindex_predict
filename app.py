@@ -20,7 +20,7 @@ def predict():
     prediction = model.predict(final_features)
     print(prediction[0])
     output = round(prediction[0], 2) #gives output
-    if output in range(0,51)):
+    if output in range(0,51):
         return render_template('good_home.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
     elif output in range(51,100):
         return render_template('moderate_home.html', prediction_text="Air Quality Index is: {}".format(output) #give whole output+text
