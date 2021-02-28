@@ -20,8 +20,8 @@ def predict():
     prediction = model.predict(final_features)
     print(prediction[0])
 
-    #output = round(prediction[0], 2)
-    return render_template('home.html', prediction_text="AQI for Jaipur {}".format(prediction[0]))
+    output = round(prediction[0], 2)
+    return render_template('home.html', prediction_text="The Air Quality Index is:{}".format(output))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
