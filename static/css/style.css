@@ -16,7 +16,6 @@ html { width: 100%; height:100%; overflow:hidden; }
 body { 
 	width: 100%;
 	height:100%;
-	overflow:scroll;
 	font-family: 'Open Sans', sans-serif;
 	background: #092756;
 	color: #fff;
@@ -32,6 +31,7 @@ body {
 
 }
 .login { 
+	
 	position: relative;
 	left: 50%;
 	margin: 2rem auto;
