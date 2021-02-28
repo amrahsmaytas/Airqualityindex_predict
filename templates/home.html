@@ -51,7 +51,7 @@ span.Very_Unhealthy{
   display: flex; 
   height: 50px;
   padding: 1px;
-  font-size:10mm;
+  font-size:8mm;
   color:black;
   justify-content: center;
   align-items: center;
@@ -71,9 +71,9 @@ span.Very_Unhealthy{
 <body>
   <img src="https://github.com/amrahsmaytas/Airqualityindex_predict/blob/master/templates/boy_girl_masks-removebg-preview.png?raw=true"> 
   <br>
- <div class="login">
- 	<p> About App: This App is powered By A.i which helps predict us the Air Quality Index by taking the parameters like Wind Speed(MAX,AVG) and Temperature (MIN,MAX,AVG) </p>
-   <p> About A.Q.I:
+  <h3> About App: </h3>
+  <p style="text-align:left">  This App is powered By A.i which helps predict us the Air Quality Index by taking the parameters like Wind Speed(MAX,AVG) and Temperature (MIN,MAX,AVG) </p>
+  <h3> About A.Q.I: </h3>
     <p> </p>
     <span class="good"><b>Good(0-50)</b></span> <br/>
     <p> </p>
@@ -84,8 +84,7 @@ span.Very_Unhealthy{
     <span class="Unhealthy"><b>Unhealthy(151-200)</b> </span> <br/>
     <p> </p>
     <span class="Very_Unhealthy"><b>Very Unhealthy(201-300)</b> </span> <br/>
-   </p>
-
+ <div class="login">
    <h3>Let's Predict Air Quality Index </h3>
     <form action="{{ url_for('predict')}}"method="post">
       <input type="text" name="interview_score3" placeholder="Maximum Wind Speed In (M/S)" required="required" /><br>
