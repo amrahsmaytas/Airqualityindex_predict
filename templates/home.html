@@ -4,43 +4,48 @@
 <head>
 <style>
 span.good{
-  display: inline; 
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 2px solid white;  
+  display: flex; 
+  height: 50px;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid white;  
   background-color: green; 
 }
 span.Moderate{
-  display: inline; 
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 2px solid white;  
+  display: flex; 
+  height: 50px;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid white;  
   background-color: yellow; 
 }
 span.Unhealthy_for_Sensitive_Groups{
-  display: inline; 
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 2px solid white;  
+  display: flex; 
+  height: 50px;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid white;  
   background-color: orange; 
 }
 span.Unhealthy{
-  display: inline; 
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 2px solid white;  
+  display: flex; 
+  height: 50px;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid white;  
   background-color: red; 
 }
 span.Very_Unhealthy{
-  display: inline; 
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 2px solid white;  
+  display: flex; 
+  height: 50px;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid white;  
   background-color: purple; 
 }
 </style>
@@ -57,10 +62,21 @@ span.Very_Unhealthy{
  <div class="login">
   <img src="https://github.com/amrahsmaytas/Airqualityindex_predict/blob/master/templates/boy_girl_masks-removebg-preview.png?raw=true"> 
   <br>
-  <img src="https://github.com/amrahsmaytas/Airqualityindex_predict/blob/master/templates/aqi-iilustration.jpg?raw=true">
- 	<p> About App: This App powered By A.i helps predict Air Quality Index by taking the parameters like Wind Speed(MAX,AVG) and Temperature (MIN,MAX,AVG) </p>
-	<h3>Let's Predict Air Quality Index </h3>
-     <!-- Main Input For Receiving Query to our ML -->
+ 	<p> About App: This App is powered By A.i which helps predict us the Air Quality Index by taking the parameters like Wind Speed(MAX,AVG) and Temperature (MIN,MAX,AVG) </p>
+   <p> About A.Q.I:
+    <p> </p>
+    <span class="good"><b>Good </b> (0-50)</span> <br/>
+    <p> </p>
+    <span class="Moderate"><b>Moderate</b> (51-100)</span> <br/>
+    <p> </p>
+    <span class="Unhealthy_for_Sensitive_Groups"><b>Unhealthy_for_Sensitive_Groups</b> (101-150)</span> <br/>
+    <p> </p>
+    <span class="Unhealthy"><b>Unhealthy</b> (151-200)</span> <br/>
+    <p> </p>
+    <span class="Very_Unhealthy"><b>Very_Unhealthy</b> (201-300)</span> <br/>
+   </p>
+
+   <h3>Let's Predict Air Quality Index </h3>
     <form action="{{ url_for('predict')}}"method="post">
       <input type="text" name="interview_score3" placeholder="Maximum Wind Speed In (M/S)" required="required" /><br>
     	<input type="text" name="interview_score6" placeholder="Average Wind Speed In (M/S)" required="required" /><br>
