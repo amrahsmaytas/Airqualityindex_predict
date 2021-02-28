@@ -73,6 +73,20 @@ span.Very_Unhealthy{
   background-color: purple; 
 }
 
+span.Hazardous{
+  display: flex; 
+  height: 40px;
+  padding: 0.05px;
+  font-size:4mm;
+  color:black;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;  
+  background-color: #800000; 
+}
+
+	
+
 html { width: 100%; height:100%; overflow:scroll; }
 
 body { 
@@ -141,11 +155,12 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
   <h3> About App: </h3>
   <p style="text-align:center">  The App is powered By A.i which helps us predict the Air Quality using the parameters like Wind Speed(MAX,AVG) and Temperature (MIN,MAX,AVG) :)</p>
   <h3> About A.Q.I: </h3>
-    <span class="good"><b>Good(0-50)</b></span> 
-    <span class="Moderate"><b>Moderate(51-100)</b></span> 
-    <span class="Unhealthy_for_Sensitive_Groups"><b>Unhealthy for Sensitive Groups(101-150)</b> </span> 
-    <span class="Unhealthy"><b>Unhealthy(151-200)</b> </span> 
-    <span class="Very_Unhealthy"><b>Very Unhealthy(201-300)</b> </span> 
+    <span class="good"><b>Good(0-50 PM10)</b></span> 
+    <span class="Moderate"><b>Moderate(51-100 PM10)</b></span> 
+    <span class="Unhealthy_for_Sensitive_Groups"><b>Unhealthy for Sensitive Groups(101-150 PM10)</b> </span> 
+    <span class="Unhealthy"><b>Unhealthy(151-200 PM10)</b> </span> 
+    <span class="Very_Unhealthy"><b>Very Unhealthy(201-300 PM10)</b> </span> 
+    <span class="Hazardous"><b>Hazardous(301-500 PM10)</b> </span> 
    <h3>Let's Predict Air Quality Index </h3>
     <form action="{{ url_for('predict')}}"method="post">
       <input type="text" name="interview_score3" placeholder="Maximum Wind Speed In (M/S)" required="required" /><br>
