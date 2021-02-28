@@ -5,7 +5,7 @@
 <style>
 span.good{
   display: flex; 
-  width: 400px;
+  width: 450px;
   height: 50px;
   padding: 1px;
   font-size:10mm;
@@ -18,7 +18,7 @@ span.good{
 span.Moderate{
   display: flex; 
   height: 50px;
-  width: 400px;
+  width: 450px;
   padding: 1px;
   font-size:10mm;
   color:black;
@@ -30,7 +30,7 @@ span.Moderate{
 span.Unhealthy_for_Sensitive_Groups{
   display: flex; 
   height: 50px;
-  width: 400px;
+  width: 450px;
   padding: 1px;
   font-size: 5mm;
   color:black;
@@ -42,7 +42,7 @@ span.Unhealthy_for_Sensitive_Groups{
 span.Unhealthy{
   display: flex; 
   height: 50px;
-  width: 400px;
+  width: 450px;
   padding: 1px;
   font-size:10mm;
   color:black;
@@ -54,7 +54,7 @@ span.Unhealthy{
 span.Very_Unhealthy{
   display: flex; 
   height: 50px;
-  width: 400px;
+  width: 450px;
   padding: 1px;
   font-size:8mm;
   color:black;
@@ -74,6 +74,7 @@ span.Very_Unhealthy{
 </head>
 
 <body>
+ <div class="login">
   <img src="https://github.com/amrahsmaytas/Airqualityindex_predict/blob/master/templates/boy_girl_masks-removebg-preview.png?raw=true"> 
   <br>
   <h3> About App: </h3>
@@ -89,7 +90,6 @@ span.Very_Unhealthy{
     <span class="Unhealthy"><b>Unhealthy(151-200)</b> </span> <br/>
     <p> </p>
     <span class="Very_Unhealthy"><b>Very Unhealthy(201-300)</b> </span> <br/>
- <div class="login">
    <h3>Let's Predict Air Quality Index </h3>
     <form action="{{ url_for('predict')}}"method="post">
       <input type="text" name="interview_score3" placeholder="Maximum Wind Speed In (M/S)" required="required" /><br>
